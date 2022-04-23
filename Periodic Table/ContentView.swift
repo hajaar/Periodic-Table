@@ -7,10 +7,37 @@
 
 import SwiftUI
 
+struct CellView: View {
+    var index: Int
+    var body: some View {
+        ZStack {
+            Color(hex: PeriodicTable.elements[index].CPKHexColor)
+            let a = PeriodicTable.elements[index].Symbol
+            Text(a)
+        }
+
+
+
+    }
+
+}
+
 struct ContentView: View {
     var body: some View {
-        Text("\(PeriodicTable.elements[0].AtomicMass)")
-            .padding()
+        ZStack {
+            VStack {
+            ForEach(0..<9) {i in
+                HStack {
+                    ForEach(0..<18) {j in
+                        CellView(index: 18*i+j)
+
+
+                    }
+                }
+
+            }
+            }
+        }
     }
 }
 
