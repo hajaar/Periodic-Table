@@ -28,6 +28,8 @@ struct ContentView: View {
                     Text("Chemical Group Block").tag(1)
                     Text("Standard State").tag(2)
                     Text("Atomic Mass").tag(3)
+                    Text("Boiling Point").tag(4)
+                    Text("Density").tag(5)
                 }
             }
             ForEach(0..<9) {i in
@@ -37,7 +39,10 @@ struct ContentView: View {
                         CellView(index: index, propertySelection: propertySelection)
                             .onTapGesture {
                                 if PeriodicTable.elements[index].shouldShow {
-                                    showDetails = true
+                                    withAnimation {
+                                        showDetails = true
+                                    }
+
                                     showDetailsForIndex = index
                                 }
                             }
@@ -51,8 +56,12 @@ struct ContentView: View {
         .padding()
         if showDetails {
             DetailView(index: showDetailsForIndex)
+                .transition(.opacity)
                 .onTapGesture {
-                    showDetails = false
+                    withAnimation {
+                        showDetails = false
+                    }
+
                 }
         }
     }

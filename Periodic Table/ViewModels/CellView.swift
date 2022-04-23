@@ -18,8 +18,6 @@ struct CellView: View {
     var body: some View {
 
         ZStack {
-
-
             let t = getColor()
             t.clipShape(RoundedRectangle(cornerRadius: 8))
             if !emptyCell {
@@ -40,12 +38,7 @@ struct CellView: View {
                     .font(.system(size: 8))
                     .multilineTextAlignment(.center)
             }
-
-
         }
-
-
-
     }
     func getColor() -> Color {
         switch propertySelection {
@@ -54,7 +47,11 @@ struct CellView: View {
         case 2:
             return emptyCell ? Color.clear : element.stateColor
         case 3:
-            return emptyCell ? Color.clear : element.stateColor
+            return emptyCell ? Color.clear : Color.green.opacity((Double(element.AtomicMass)!)/295.216)
+        case 4:
+            return emptyCell ? Color.clear : Color.red.opacity((Double(element.BoilingPoint) ?? 0)/5869)
+        case 5:
+            return emptyCell ? Color.clear : Color.gray.opacity((Double(element.Density) ?? 0)/22.57)
         default:
             return emptyCell ? Color.clear : element.stateColor
         }
@@ -67,6 +64,10 @@ struct CellView: View {
             return element.StandardState
         case 3:
             return element.AtomicMass
+        case 4:
+            return element.BoilingPoint
+        case 5:
+            return element.Density
         default:
             return element.StandardState
         }

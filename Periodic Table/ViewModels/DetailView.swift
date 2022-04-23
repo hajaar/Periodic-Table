@@ -78,7 +78,7 @@ struct DetailView: View {
             .scaledToFit()
 
         }
-        .frame(width: 500, height: 500, alignment: .center)
+        .frame(width: 600, height: 500, alignment: .center)
 
 
     }
