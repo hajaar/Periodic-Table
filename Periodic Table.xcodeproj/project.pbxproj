@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F21A22B22813E85A00D478E4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21A22B12813E85A00D478E4 /* Color.swift */; };
+		F21A22B628140B1F00D478E4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21A22B528140B1F00D478E4 /* CellView.swift */; };
+		F21A22B928140D8C00D478E4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21A22B828140D8C00D478E4 /* DetailView.swift */; };
 		F2F981142813CE3400B698FE /* Periodic_TableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F981132813CE3400B698FE /* Periodic_TableApp.swift */; };
 		F2F981162813CE3400B698FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F981152813CE3400B698FE /* ContentView.swift */; };
 		F2F981182813CE3700B698FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2F981172813CE3700B698FE /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		F21A22B12813E85A00D478E4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F21A22B528140B1F00D478E4 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		F21A22B828140D8C00D478E4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F2F981102813CE3400B698FE /* Periodic Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Periodic Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F981132813CE3400B698FE /* Periodic_TableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periodic_TableApp.swift; sourceTree = "<group>"; };
 		F2F981152813CE3400B698FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +50,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		F21A22B728140B7400D478E4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F21A22B528140B1F00D478E4 /* CellView.swift */,
+				F21A22B828140D8C00D478E4 /* DetailView.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F2F981072813CE3400B698FE = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +78,10 @@
 		F2F981122813CE3400B698FE /* Periodic Table */ = {
 			isa = PBXGroup;
 			children = (
+				F21A22B42813E87A00D478E4 /* Helper */,
 				F2F981252813DCF700B698FE /* Models */,
 				F2F981132813CE3400B698FE /* Periodic_TableApp.swift */,
-				F21A22B42813E87A00D478E4 /* Helper */,
+				F21A22B728140B7400D478E4 /* ViewModels */,
 				F2F981152813CE3400B698FE /* ContentView.swift */,
 				F2F981172813CE3700B698FE /* Assets.xcassets */,
 				F2F981192813CE3700B698FE /* Preview Content */,
@@ -164,6 +178,8 @@
 			files = (
 				F2F981162813CE3400B698FE /* ContentView.swift in Sources */,
 				F2F981242813DCB700B698FE /* PeriodicTable.swift in Sources */,
+				F21A22B628140B1F00D478E4 /* CellView.swift in Sources */,
+				F21A22B928140D8C00D478E4 /* DetailView.swift in Sources */,
 				F2F981222813CE5700B698FE /* Element.swift in Sources */,
 				F21A22B22813E85A00D478E4 /* Color.swift in Sources */,
 				F2F981142813CE3400B698FE /* Periodic_TableApp.swift in Sources */,
