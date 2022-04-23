@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Element: Identifiable {
     var id = UUID()
@@ -26,6 +27,19 @@ struct Element: Identifiable {
     var Density = ""
     var GroupBlock = ""
     var YearDiscovered = ""
+    var shouldShow: Bool = true
+    var stateColor: Color {
+        switch StandardState {
+        case "Gas":
+            return Color(hex: "DBFEFE")
+        case "Solid":
+            return Color(hex: "F1F0F1")
+        case "Liquid":
+            return Color(hex: "FAC9C4")
+        default:
+            return Color.clear
+        }
+    }
 
     init(_ AtomicNumber: String, _ Symbol: String, _ AtomicName: String, _ AtomicMass: String, _ CPKHexColor: String, _ ElectronConfiguration: String, _ Electronegativity: String, _ AtomicRadius: String, _ IonizationEnergy: String, _ ElectronAffinity: String, _ OxidationStates: String, _ StandardState: String, _ MeltingPoint: String, _ BoilingPoint: String, _ Density: String, _ GroupBlock: String, _ YearDiscovered: String ) {
 
@@ -69,9 +83,20 @@ struct Element: Identifiable {
         self.YearDiscovered = ""
     }
 
-    init(atomicNumber: String, atomicName: String, Symbol: String) {
+    init(atomicNumber: String, atomicName: String, Symbol: String, shouldShow: Bool) {
         self.AtomicName = atomicName
         self.AtomicNumber = atomicNumber
+        self.Symbol = Symbol
+        self.shouldShow = shouldShow
+    }
+
+
+    init(shouldShow: Bool) {
+        self.shouldShow = false
+    }
+
+    init(Symbol: String, shouldShow: Bool) {
+        self.shouldShow = false
         self.Symbol = Symbol
     }
 
