@@ -11,6 +11,7 @@
 		F2F981162813CE3400B698FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F981152813CE3400B698FE /* ContentView.swift */; };
 		F2F981182813CE3700B698FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2F981172813CE3700B698FE /* Assets.xcassets */; };
 		F2F9811B2813CE3700B698FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2F9811A2813CE3700B698FE /* Preview Assets.xcassets */; };
+		F2F981222813CE5700B698FE /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F981212813CE5700B698FE /* Element.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F2F981152813CE3400B698FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F2F981172813CE3700B698FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2F9811A2813CE3700B698FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F2F981212813CE5700B698FE /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		F2F981122813CE3400B698FE /* Periodic Table */ = {
 			isa = PBXGroup;
 			children = (
+				F2F981212813CE5700B698FE /* Element.swift */,
 				F2F981132813CE3400B698FE /* Periodic_TableApp.swift */,
 				F2F981152813CE3400B698FE /* ContentView.swift */,
 				F2F981172813CE3700B698FE /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2F981162813CE3400B698FE /* ContentView.swift in Sources */,
+				F2F981222813CE5700B698FE /* Element.swift in Sources */,
 				F2F981142813CE3400B698FE /* Periodic_TableApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
