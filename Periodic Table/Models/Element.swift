@@ -40,6 +40,33 @@ struct Element: Identifiable {
             return Color.clear
         }
     }
+    var groupBlockColor: Color {
+        switch GroupBlock {
+        case "Nonmetal":
+            return Color(hex: "FFFFD2")
+        case "Alkali metal":
+            return Color(hex: "FBCFCB")
+        case "Alkaline earth metal":
+            return Color(hex: "D2D1FC")
+        case "Transition metal":
+            return Color(hex: "C7DBFC")
+        case "Metalloid":
+            return Color(hex: "E2ECC8")
+        case "Post-transition metal":
+            return Color(hex: "D9FECD")
+        case "Halogen":
+            return Color(hex: "FFFFD0")
+        case "Noble gas":
+            return Color(hex: "FCE3C7")
+        case "Lanthanide":
+            return Color(hex: "D2FDFF")
+        case "Actinide":
+            return Color(hex: "D7FEEC")
+
+        default:
+            return Color.clear
+        }
+    }
 
     init(_ AtomicNumber: String, _ Symbol: String, _ AtomicName: String, _ AtomicMass: String, _ CPKHexColor: String, _ ElectronConfiguration: String, _ Electronegativity: String, _ AtomicRadius: String, _ IonizationEnergy: String, _ ElectronAffinity: String, _ OxidationStates: String, _ StandardState: String, _ MeltingPoint: String, _ BoilingPoint: String, _ Density: String, _ GroupBlock: String, _ YearDiscovered: String ) {
 

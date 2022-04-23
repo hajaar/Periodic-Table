@@ -80,6 +80,7 @@ struct DetailView: View {
         }
         .frame(width: 500, height: 500, alignment: .center)
 
+
     }
 
 }

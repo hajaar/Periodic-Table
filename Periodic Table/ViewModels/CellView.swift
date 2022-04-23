@@ -7,13 +7,20 @@
 import SwiftUI
 struct CellView: View {
     var index: Int
-    @State var showDetails = false
+    var propertySelection = 1
+    var element: Element {
+        return PeriodicTable.elements[index]
+    }
+    var emptyCell: Bool {
+        return !element.shouldShow
+    }
+
     var body: some View {
-        let element = PeriodicTable.elements[index]
+
         ZStack {
 
-            let emptyCell = !element.shouldShow
-            let t = emptyCell ? Color.clear : element.stateColor
+
+            let t = getColor()
             t.clipShape(RoundedRectangle(cornerRadius: 8))
             if !emptyCell {
                 t.overlay(
@@ -27,9 +34,9 @@ struct CellView: View {
                 Text(element.Symbol)
                     .font(.body.bold())
                 Text(element.AtomicName)
-                    .font(.system(size: 8))
+                    .font(.system(size: 8).bold())
                     .multilineTextAlignment(.center)
-                Text(element.StandardState)
+                Text(getBottomInformation())
                     .font(.system(size: 8))
                     .multilineTextAlignment(.center)
             }
@@ -39,6 +46,30 @@ struct CellView: View {
 
 
 
+    }
+    func getColor() -> Color {
+        switch propertySelection {
+        case 1:
+            return emptyCell ? Color.clear : element.groupBlockColor
+        case 2:
+            return emptyCell ? Color.clear : element.stateColor
+        case 3:
+            return emptyCell ? Color.clear : element.stateColor
+        default:
+            return emptyCell ? Color.clear : element.stateColor
+        }
+    }
+    func getBottomInformation() -> String {
+        switch propertySelection {
+        case 1:
+            return element.GroupBlock
+        case 2:
+            return element.StandardState
+        case 3:
+            return element.AtomicMass
+        default:
+            return element.StandardState
+        }
     }
 
 }
